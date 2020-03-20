@@ -4,13 +4,15 @@
 using namespace cv;
 using namespace std;
 
-const int fps = 20;
-
 int main(int argv, char** argc){
 	Mat frame;
 
-	VideoCapture vid(0);
+	//VideoCapture vid(0); // use webcam
+	VideoCapture vid("rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov");
 
+	namedWindow("Webcam", WINDOW_AUTOSIZE);
+
+	int fps =(int)vid.get(CAP_PROP_FPS);
 	if(!vid.isOpened()){
 		return -1;
 	}
