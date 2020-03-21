@@ -11,7 +11,7 @@ if(COMMAND cmake_policy)
 endif(COMMAND cmake_policy)
 
 # add the executable
-add_executable(Mosaic multiply_opencv.cpp)
+add_executable(${PROJECT_NAME} multiply_opencv.cpp)
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 14)
@@ -20,14 +20,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # PTHREAD
 SET(THREADS_PREFER_PTHREAD_FLAG ON)
 #Add lib for fs
-TARGET_LINK_LIBRARIES(Mosaic stdc++fs)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} stdc++fs)
 
 # Set C++14 support
-set_property(TARGET Mosaic PROPERTY CXX_STANDARD 14)
-set_property(TARGET Mosaic PROPERTY CXX_STANDARD_REQUIRED ON)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 14)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
 
 # link opencv library
 include_directories(${X11_INCLUDE_DIR})
-target_link_libraries(Mosaic ${OpenCV_LIBS} )
-target_link_libraries(Mosaic Threads::Threads)
-target_link_libraries(Mosaic X11)
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} )
+target_link_libraries(${PROJECT_NAME} Threads::Threads)
+target_link_libraries(${PROJECT_NAME} X11)
