@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.10)
 # set the project name
-project(Mosaic)
+project(opencv_cuda)
 find_package(X11 REQUIRED)
 find_package(Threads REQUIRED)
 find_package(OpenCV REQUIRED)
@@ -11,7 +11,7 @@ if(COMMAND cmake_policy)
 endif(COMMAND cmake_policy)
 
 # add the executable
-add_executable(${PROJECT_NAME} multiply_opencv.cpp)
+add_executable(${PROJECT_NAME} camera_calibration.cpp)
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 14)
