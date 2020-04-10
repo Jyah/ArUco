@@ -11,7 +11,7 @@ if(COMMAND cmake_policy)
 endif(COMMAND cmake_policy)
 
 # add the executable
-add_executable(${PROJECT_NAME} camera_calibration.cpp)
+add_executable(${PROJECT_NAME} multiply_opencv.cpp)
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 14)
@@ -19,6 +19,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # PTHREAD
 SET(THREADS_PREFER_PTHREAD_FLAG ON)
+
 #Add lib for fs
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} stdc++fs)
 

@@ -3,11 +3,12 @@
 
 #include <iostream>
 
+
 int main(int argc, char *argv[])
 {
     const int width  = 1280;
     const int height = 720;
-    double scale     = 1.0;
+    double scale = 1.0;
 
     cv::Mat h_src1(cv::Size(width, height), CV_8UC1, cv::Scalar(1));
     cv::Mat h_src2(h_src1.size(), h_src1.type(), cv::Scalar(10));
@@ -32,7 +33,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    std::cout << "time: " << (sum/iter) << " ms" << std::endl;
+    std::cout <<"time: " << (sum/iter) << " ms" << std::endl;
 
     return 0;
 }
